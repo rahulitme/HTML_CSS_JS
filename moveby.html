@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow()">openwindow</button>
+    <button onclick="moveWindow()">movewindow</button>
+    <script>
+        var myWindow;
+        function openWindow() {
+            myWindow = window.open("", "", "width=500px,height=200px,left=100px,top=50");
+            myWindow.document.write("<p>this is the location of the new window</p>");
+        }
+        function moveWindow() {
+            myWindow.moveBy(1000, 200);
+            myWindow.focus();
+        }
+    </script>
+</body>
+</html>
